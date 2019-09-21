@@ -1,0 +1,1 @@
+# Standard Golang Project Skeleton
