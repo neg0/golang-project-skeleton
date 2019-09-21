@@ -1,0 +1,17 @@
+version: "3"
+services:
+  dice-golang:
+    image: golang_dice:1.2
+    build:
+      context: ..
+      dockerfile: build/docker/golang/Dockerfile
+    container_name: dice-golang
+    restart: on-failure
+    volumes:
+      - ./:/usr/local/golang-dev/dice
+    networks:
+      - dice
+
+networks:
+  dice:
+    driver: bridge
