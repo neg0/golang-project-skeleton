@@ -10,6 +10,10 @@ up:
 down:
 	docker-compose -f deploy/docker-compose.yml down
 
+.PHONY: fmt         # Go format the files
+fmt:
+	docker-compose -f deploy/docker-compose.yml exec golang-skeleton gofmt -w ./..
+
 .PHONY: test        # Runs the tests inside the container
 test:
 	docker-compose -f deploy/docker-compose.yml exec golang-skeleton go test ./... -coverprofile=coverage.out && go tool cover -html=coverage.out

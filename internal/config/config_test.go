@@ -11,16 +11,16 @@ func TestNewConfig(t *testing.T) {
 	}
 
 	t.Run("should have host address", func(t *testing.T) {
-		if len(sut.Api.Host) <  1 {
-			t.Log(sut.Api.Host)
-			t.Log(len(sut.Api.Host))
+		if len(sut.API.Host) < 1 {
+			t.Log(sut.API.Host)
+			t.Log(len(sut.API.Host))
 			t.Fail()
 		}
 	})
 
 	t.Run("should have a port number", func(t *testing.T) {
-		if sut.Api.Port < 1 {
-			t.Log(sut.Api.Port)
+		if sut.API.Port < 1 {
+			t.Log(sut.API.Port)
 			t.Fail()
 		}
 	})

@@ -16,7 +16,7 @@ type API struct {
 }
 
 type Configuration struct {
-	Api API `json:"api"`
+	API API `json:"api"`
 }
 
 var instance *Configuration
@@ -65,7 +65,7 @@ func isProd() bool {
 // It returns the configuration file path
 func filePath() []byte {
 	configFileName := "config.dev.json"
-	if isProd() == true {
+	if isProd() {
 		configFileName = "config.prod.json"
 	}
 	return []byte(fmt.Sprintf("%s/%s", directoryPath, configFileName))
