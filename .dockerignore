@@ -1,8 +1,2 @@
-api/
-cmd/
-config/
-init/
 vendor/
-internal/
-web/
 test/

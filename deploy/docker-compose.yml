@@ -1,17 +1,19 @@
 version: "3"
 services:
-  dice-golang:
-    image: golang_dice:1.2
+  golang-skeleton:
+    image: golang_skeleton:1.2.9
     build:
       context: ..
       dockerfile: build/docker/golang/Dockerfile
-    container_name: dice-golang
+    container_name: golang-project-skeleton
+    tty: true
     restart: on-failure
     volumes:
-      - ./:/usr/local/golang-dev/dice
+      - ../:/usr/local/golang-dev/golang-project-skeleton
+    working_dir: /usr/local/golang-dev/golang-project-skeleton
     networks:
-      - dice
+      - golang_project_skeleton
 
 networks:
-  dice:
+  golang_project_skeleton:
     driver: bridge

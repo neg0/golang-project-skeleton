@@ -1,7 +1,10 @@
 package main
 
-import _ "github.com/neg0/dice-social/init"
+import (
+	_ "github.com/neg0/golang-project-skeleton/init"
+	"github.com/neg0/golang-project-skeleton/internal/hello"
+)
 
 func main() {
-	println("Hello Dice!")
+	println(hello.SayHello())
 }

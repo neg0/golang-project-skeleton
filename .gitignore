@@ -1,3 +1,7 @@
+# Files
 .env
+coverage.out
+
+# Directories
 vendor/
 bin/
